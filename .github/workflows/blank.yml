@@ -30,8 +30,7 @@ jobs:
         env: 
           ADMINPASSWORD: ${{ secrets.ADMINPASSWORD }}
         run: net user runneradmin $Env:ADMINPASSWORD
-        
-
-        
+      - name: Connect to your RDP 2core-7GB Ram.
+        run: cmd /c NGROK-CHECK.bat
       - name: Run loop
         run: ping -t localhost
