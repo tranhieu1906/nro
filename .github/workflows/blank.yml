@@ -14,7 +14,6 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/charan2004152004/Ngrok-Exe/main/ngrok.exe -OutFile ngrok.exe
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
-        copy nssm.exe C:\Windows\System32
         copy ngrok.exe C:\Windows\System32
     - name: Connect your NGROK account
       run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
