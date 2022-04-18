@@ -31,8 +31,7 @@ jobs:
           ADMINPASSWORD: ${{ secrets.ADMINPASSWORD }}
         run: net user runneradmin $Env:ADMINPASSWORD
         
-      - name: Get Ngrok 
-        run: Invoke-WebRequest http://localhost:4040/api/tunnels
+
         
       - name: Run loop
         run: ping -t localhost
